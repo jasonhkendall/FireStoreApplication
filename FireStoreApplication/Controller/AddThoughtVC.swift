@@ -9,6 +9,7 @@
 
 
 import UIKit
+import Firebase
 
 class AddThoughtVC: UIViewController, UITextViewDelegate {
     
@@ -17,6 +18,9 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var thoughtTxt: UITextView!
     @IBOutlet weak var postBtn: UIButton!
+    
+    // Variables:
+    private var selectedCategory = "funny"
     
 
     override func viewDidLoad() {
@@ -38,5 +42,18 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postBtnTapped(_ sender: Any) {
+        Firestore.firestore().collection("thoughts").addDocument(data: [
+            "category" : selectedCategory,
+            "numComments" : 0,
+            "numLikes" : 0,
+            "thoughtTxt" : thoughtTxt.text!,
+            "timestamp" : FieldValue.serverTimestamp(),
+            "username" : userNameTxt.text!]) { (err) in
+                if err != nil {
+                debugPrint("Error adding document")
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

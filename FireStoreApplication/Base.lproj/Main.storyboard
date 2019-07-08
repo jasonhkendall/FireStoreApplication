@@ -22,6 +22,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="FireStore" id="pCQ-MN-FSP">
                         <barButtonItem key="rightBarButtonItem" image="addThoughtIcon" id="JIA-aU-l8L">
+                            <color key="tintColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="9nb-pi-rGX" kind="show" id="QF5-WM-Hac"/>
                             </connections>
@@ -50,7 +51,7 @@
                                     <segment title="Serious"/>
                                     <segment title="Crazy"/>
                                 </segments>
-                                <color key="tintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.01388947852" green="0.60620111229999996" blue="0.89712303879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="categoryChanged:" destination="9nb-pi-rGX" eventType="valueChanged" id="euD-XY-aGo"/>
                                 </connections>
@@ -73,7 +74,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwU-bY-gx7">
                                 <rect key="frame" x="177" y="288" width="60" height="35"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.01388947852" green="0.60620111229999996" blue="0.89712303879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="CUA-e8-d2Z"/>
                                     <constraint firstAttribute="height" constant="35" id="I29-Nc-FbM"/>
@@ -89,6 +90,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gM3-XJ-ozC" firstAttribute="trailing" secondItem="sN8-b3-sca" secondAttribute="trailing" constant="20" id="4aj-iy-3N8"/>
                             <constraint firstItem="gM3-XJ-ozC" firstAttribute="trailing" secondItem="ts4-fv-x2Y" secondAttribute="trailing" constant="20" id="Akh-kg-4si"/>
@@ -123,10 +125,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lRG-ho-16t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.96078431372549022" green="0.50980392156862742" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.082352941176470587" green="0.41577506069999998" blue="0.73965609070000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.96078431372549022" green="0.50980392156862742" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

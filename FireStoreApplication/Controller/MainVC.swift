@@ -7,7 +7,14 @@
 //
 
 import UIKit
-import Firebase
+
+
+enum ThoughtCategory: String {
+    case serious = "serious"
+    case funny = "funny"
+    case crazy = "crazy"
+    case popular = "popular"
+}
 
 class MainVC: UIViewController {
 
