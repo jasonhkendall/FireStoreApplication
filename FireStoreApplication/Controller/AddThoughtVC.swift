@@ -6,6 +6,8 @@
 //  Copyright © 2019 JHK. All rights reserved.
 //
 
+
+
 import UIKit
 
 class AddThoughtVC: UIViewController, UITextViewDelegate {
