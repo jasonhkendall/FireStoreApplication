@@ -20,7 +20,7 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var postBtn: UIButton!
     
     // Variables:
-    private var selectedCategory = "funny"
+    private var selectedCategory = ThoughtCategory.funny.rawValue
     
 
     override func viewDidLoad() {
@@ -39,17 +39,27 @@ class AddThoughtVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func categoryChanged(_ sender: Any) {
+        switch categorySegment.selectedSegmentIndex {
+        case 0:
+            selectedCategory = ThoughtCategory.funny.rawValue
+        case 1:
+            selectedCategory = ThoughtCategory.serious.rawValue
+        default:
+            selectedCategory = ThoughtCategory.crazy.rawValue
+        }
     }
     
     @IBAction func postBtnTapped(_ sender: Any) {
+        guard let username = userNameTxt.text else { return }
         Firestore.firestore().collection("thoughts").addDocument(data: [
-            "category" : selectedCategory,
-            "numComments" : 0,
-            "numLikes" : 0,
-            "thoughtTxt" : thoughtTxt.text!,
-            "timestamp" : FieldValue.serverTimestamp(),
-            "username" : userNameTxt.text!]) { (err) in
-                if err != nil {
+            CATEGORY : selectedCategory,
+            NUM_COMMENTS : 0,
+            NUM_LIKES : 0,
+            THOUGHT_TXT : thoughtTxt.text!,
+            TIMESTAMP : FieldValue.serverTimestamp(),
+            USERNAME : username
+        ]) { (err) in
+                if let err = err {
                 debugPrint("Error adding document")
             } else {
                 self.navigationController?.popViewController(animated: true)
