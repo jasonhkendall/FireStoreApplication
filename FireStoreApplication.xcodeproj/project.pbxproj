@@ -15,6 +15,8 @@
 		4196F93D22D180EC003AEF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4196F93B22D180EC003AEF64 /* LaunchScreen.storyboard */; };
 		4196F94522D18184003AEF64 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4196F94422D18183003AEF64 /* GoogleService-Info.plist */; };
 		41D852FB22D5046100E86684 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D852FA22D5046000E86684 /* Constants.swift */; };
+		41D852FD22DBBFAD00E86684 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D852FC22DBBFAD00E86684 /* Thought.swift */; };
+		41D852FF22DBC1FB00E86684 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D852FE22DBC1FB00E86684 /* ThoughtCell.swift */; };
 		B3B7DD5980254DE384738B1A /* Pods_FireStoreApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9046E3863C1DD6720FFD365 /* Pods_FireStoreApplication.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		4196F93E22D180EC003AEF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4196F94422D18183003AEF64 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		41D852FA22D5046000E86684 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41D852FC22DBBFAD00E86684 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
+		41D852FE22DBC1FB00E86684 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
 		903AFB4429F6786D0E4FEB1F /* Pods-FireStoreApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStoreApplication.release.xcconfig"; path = "Target Support Files/Pods-FireStoreApplication/Pods-FireStoreApplication.release.xcconfig"; sourceTree = "<group>"; };
 		B9046E3863C1DD6720FFD365 /* Pods_FireStoreApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireStoreApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1348C1557A142F1C4629AD5 /* Pods-FireStoreApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireStoreApplication.debug.xcconfig"; path = "Target Support Files/Pods-FireStoreApplication/Pods-FireStoreApplication.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		4180D9D422D199F000F4F820 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				41D852FE22DBC1FB00E86684 /* ThoughtCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -65,6 +70,7 @@
 		4180D9D622D19A0600F4F820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41D852FC22DBBFAD00E86684 /* Thought.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4180D9D222D199DE00F4F820 /* AddThoughtVC.swift in Sources */,
+				41D852FD22DBBFAD00E86684 /* Thought.swift in Sources */,
 				4196F93522D180EA003AEF64 /* MainVC.swift in Sources */,
+				41D852FF22DBC1FB00E86684 /* ThoughtCell.swift in Sources */,
 				4196F93322D180EA003AEF64 /* AppDelegate.swift in Sources */,
 				41D852FB22D5046100E86684 /* Constants.swift in Sources */,
 			);

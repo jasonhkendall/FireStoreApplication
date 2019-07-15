@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 
 enum ThoughtCategory: String {
@@ -16,11 +18,38 @@ enum ThoughtCategory: String {
     case popular = "popular"
 }
 
-class MainVC: UIViewController {
-
+class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // Outlets
+    @IBOutlet private weak var segmentControl: UISegmentedControl!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // Variables
+    private var thoughts = [Thought]()
+    private var thoughtsCollectionRef: CollectionReference
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return thoughts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "thoughtCell", for: indexPath)
+            as? ThoughtCell {
+            cell.configureCell(thought: thoughts[indexPath.row])
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 
 
